@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduIA Funasa - IA para Educação em Saúde Ambiental</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#006633">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/logo-funasa.png" alt="Funasa" class="logo">
+      <h1>EduIA Funasa</h1>
+      <p>Inteligência Artificial para Saúde Ambiental e Saneamento Básico</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Converse em português ou em 14 línguas indígenas</h2>
+      <p>Toque no balão verde e pergunte sobre água, esgoto, dengue, resíduos sólidos...</p>
+      <button onclick="openChat()" class="btn">Falar com EduIA 🪶</button>
+    </div>
+  </section>
+
+  <div id="chat-float" class="chat-float" onclick="openChat()">
+    <img src="assets/logo-funasa.png" alt="EduIA" width="40">
+    <span>EduIA</span>
+  </div>
+
+  <div id="chat-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="assets/logo-funasa.png" alt="Funasa" width="40">
+        <h3>EduIA Funasa</h3>
+        <span class="close" onclick="closeChat()">×</span>
+      </div>
+
+      <div class="lang-selector">
+        <button onclick="setLang('pt-BR')">🇧🇷 Português</button>
+        <button onclick="setLang('guarani-kaiowa')">🪶 Guarani Kaiowá</button>
+        <button onclick="setLang('tikuna')">🪶 Tikuna</button>
+        <button onclick="setLang('xavante')">🪶 Xavante</button>
+        <button onclick="setLang('kaingang')">🪶 Kaingang</button>
+        <button onclick="setLang('terena')">🪶 Terena</button>
+        <button onclick="setLang('tukano')">🪶 Tukano</button>
+        <button onclick="setLang('macushi')">🪶 Macushi</button>
+        <button class="more">+10 línguas</button>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="input-area">
+        <button id="voice-btn" onclick="toggleVoice()">🎤</button>
+        <input type="text" id="user-input" placeholder="Escreva sua dúvida..." onkeypress="if(event.key==='Enter') send()">
+        <button onclick="send()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

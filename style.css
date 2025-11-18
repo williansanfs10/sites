@@ -1,0 +1,34 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+body { background:#f8f9fa; color:#333; }
+
+.container { max-width:1200px; margin:auto; padding:20px; text-align:center; }
+header { background:#006633; color:white; padding:30px 0; }
+.logo { height:70px; margin-bottom:10px; }
+h1 { font-size:2.8em; }
+.hero { padding:60px 20px; background:linear-gradient(rgba(0,102,51,0.9),rgba(0,102,51,0.9)), url('https://images.unsplash.com/photo-1582213782179-1d3e8a1d3a0b?q=80&w=1920') center/cover; color:white; }
+.btn { background:#ffcb05; color:#006633; padding:15px 30px; font-size:1.3em; border:none; border-radius:50px; cursor:pointer; margin-top:20px; }
+
+.chat-float { position:fixed; bottom:20px; right:20px; background:#006633; color:white; padding:15px 25px; border-radius:50px; cursor:pointer; box-shadow:0 5px 25px rgba(0,0,0,0.4); display:flex; align-items:center; gap:12px; z-index:999; font-weight:bold; }
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:flex-end; }
+.modal-content { width:100%; max-width:500px; height:90vh; background:white; border-radius:20px 20px 0 0; display:flex; flex-direction:column; margin:auto; }
+.modal-header { background:#006633; color:white; padding:15px; border-radius:20px 20px 0 0; display:flex; align-items:center; gap:15px; font-size:1.3em; }
+.close { margin-left:auto; font-size:30px; cursor:pointer; }
+
+.lang-selector { padding:10px; background:#f0f8f0; overflow-x:auto; white-space:nowrap; display:flex; gap:8px; }
+.lang-selector button { padding:8px 12px; border:none; border-radius:20px; background:#006633; color:white; font-size:0.9em; }
+.more { background:#555 !important; }
+
+.messages { flex:1; padding:20px; overflow-y:auto; background:#f9f9f9; }
+.message { margin:15px 0; padding:12px 18px; border-radius:18px; max-width:80%; word-wrap:break-word; }
+.bot { background:#e6f7ee; align-self:flex-start; border-bottom-left-radius:5px; }
+.user { background:#006633; color:white; align-self:flex-end; border-bottom-right-radius:5px; }
+
+.input-area { display:flex; padding:15px; background:white; border-top:1px solid #ddd; align-items:center; gap:10px; }
+.input-area input { flex:1; padding:15px; border-radius:30px; border:1px solid #ccc; font-size:16px; }
+.input-area button { background:#ffcb05; border:none; width:50px; height:50px; border-radius:50%; cursor:pointer; font-size:20px; }
+#voice-btn { background:transparent; font-size:24px; }
+
+@media (min-width:768px) {
+  .modal { align-items:center; }
+  .modal-content { border-radius:20px; height:80vh; margin:0; }
+}
